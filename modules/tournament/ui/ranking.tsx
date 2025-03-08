@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import {
   Table,
   TableBody,
@@ -29,7 +31,9 @@ const Ranking = () => {
         {ranking.map((player, index) => (
           <TableRow key={player.id}>
             <TableCell className="text-zinc-400">{`#${index + 1}`}</TableCell>
-            <TableCell className="font-medium">{player.name}</TableCell>
+            <TableCell className="font-medium">
+              <Link href={`/player/${player.id}`}>{player.name}</Link>
+            </TableCell>
             <TableCell>{player.score}</TableCell>
             <TableCell>{player.record}</TableCell>
           </TableRow>

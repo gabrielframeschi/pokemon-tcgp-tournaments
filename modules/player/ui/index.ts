@@ -1,0 +1,1 @@
+export * from "@/modules/player/ui/player-header";
