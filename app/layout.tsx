@@ -31,10 +31,13 @@ export default function RootLayout({
         <TooltipProvider>
           <div
             className={
-              "grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] bg-repeat bg-[url(/bg.jpg)]"
+              "relative grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] bg-repeat bg-[url(/bg.jpg)]"
             }
           >
-            <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+            {/* Gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/30 via-purple-600/20 to-transparent pointer-events-none"></div>
+
+            <main className="relative flex flex-col gap-8 row-start-2 items-center sm:items-start z-10">
               {children}
             </main>
           </div>
