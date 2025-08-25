@@ -7,7 +7,7 @@ export interface ITournament {
   status: TournamentStatus;
   creationDate: string;
   lastUpdate: string;
-  rakingId: string;
+  rankingId: string;
   roundsAmount: number;
   rules: string;
 }
