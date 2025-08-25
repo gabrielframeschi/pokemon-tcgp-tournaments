@@ -5,6 +5,8 @@ export interface IPlayer {
   creationDate: string;
   lastUpdate: string;
   tournamentAmount: number;
+  matchAmount: number;
+  winAmount: number;
 }
 
 export interface IPlayerBadge {

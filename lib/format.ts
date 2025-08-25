@@ -7,7 +7,7 @@ export const formatDateToLocaleString = (date: Date | string) => {
     throw new Error("Invalid date");
   }
 
-  return parsedDate.toLocaleDateString("pt-BR", {
+  return parsedDate.toLocaleDateString("en-US", {
     day: "2-digit",
     month: "2-digit",
     year: "numeric",

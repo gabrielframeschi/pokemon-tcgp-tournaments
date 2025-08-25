@@ -21,7 +21,12 @@ export const PlayerHeader = (props: IProps) => {
   return (
     <header className="flex flex-col gap-2">
       <h2 className="text-xl text-gray-950 font-medium">{data.name}</h2>
-      <p className="text-sm text-gray-400 font-medium">{`Torneios disputados: ${data.tournamentAmount}`}</p>
+
+      <ul className="flex flex-col gap-1 text-sm text-gray-500 font-medium">
+        <li>{`Tournaments: ${data.tournamentAmount}`}</li>
+        <li>{`Matches: ${data.matchAmount}`}</li>
+        <li>{`Wins: ${data.winAmount}`}</li>
+      </ul>
 
       <div className="flex gap-4 mt-2">
         {badges.map((badge) => (

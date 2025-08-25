@@ -4,6 +4,7 @@ import { PlayerHeader } from "@/modules/player/ui";
 import playersRawData from "@/temp/players.json";
 import { IPlayer } from "@/modules/player/types";
 import Link from "next/link";
+import { Card } from "@/components/custom-card";
 
 interface IProps {
   params: Promise<{
@@ -21,15 +22,15 @@ export default async function Player(props: IProps) {
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="flex items-center bg-white px-6 py-4 rounded-lg shadow-2xl">
-        <Link href="/" className="text-zinc-500 text-sm underline">
-          Voltar
+      <Card className="px-6 py-4">
+        <Link href="/" className="text-gray-500 text-sm underline">
+          Back
         </Link>
-      </div>
+      </Card>
 
-      <div className="flex items-center bg-white p-6 rounded-lg shadow-2xl">
+      <Card>
         <PlayerHeader data={player} />
-      </div>
+      </Card>
     </div>
   );
 }
