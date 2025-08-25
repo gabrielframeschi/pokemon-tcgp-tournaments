@@ -4,7 +4,9 @@ import { Ranking, TournamentHeader } from "@/modules/tournament/ui";
 import tournamentsRawData from "@/temp/tournaments.json";
 
 export default function Home() {
-  const data: ITournament[] = structuredClone(tournamentsRawData);
+  const data: ITournament[] = structuredClone(
+    tournamentsRawData,
+  ) as ITournament[];
   const tournament = data[0];
 
   return (
