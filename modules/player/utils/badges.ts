@@ -7,4 +7,4 @@ export const getBadge = (badgeId: string) => {
   if (!badgePath) return "";
 
   return badgePath;
-}
+};

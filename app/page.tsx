@@ -1,9 +1,10 @@
+import { Card } from "@/components/custom-card";
 import Ranking from "@/modules/tournament/ui/ranking";
 
 export default function Home() {
   return (
-    <div className="flex items-center bg-white p-6 rounded-lg shadow-2xl">
+    <Card>
       <Ranking />
-    </div>
+    </Card>
   );
 }

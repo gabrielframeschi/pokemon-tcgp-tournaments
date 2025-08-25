@@ -21,17 +21,17 @@ const Ranking = () => {
       <TableHeader>
         <TableRow>
           <TableHead />
-          <TableHead>Jogador</TableHead>
-          <TableHead>Pontuação</TableHead>
-          <TableHead>Placar</TableHead>
+          <TableHead>Player</TableHead>
+          <TableHead>Score</TableHead>
+          <TableHead>Record</TableHead>
         </TableRow>
       </TableHeader>
 
       <TableBody>
         {ranking.map((player, index) => (
           <TableRow key={player.id}>
-            <TableCell className="text-zinc-400">{`#${index + 1}`}</TableCell>
-            <TableCell className="font-medium">
+            <TableCell className="text-gray-500">{`#${index + 1}`}</TableCell>
+            <TableCell className="font-medium underline transition-colors hover:text-gray-500">
               <Link href={`/player/${player.id}`}>{player.name}</Link>
             </TableCell>
             <TableCell>{player.score}</TableCell>
