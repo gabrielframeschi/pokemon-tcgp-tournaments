@@ -20,7 +20,7 @@ export const PlayerHeader = (props: IProps) => {
 
   return (
     <header className="flex flex-col gap-2">
-      <h2 className="text-xl text-gray-950 font-medium">{data.name}</h2>
+      <h1 className="text-xl text-gray-950 font-medium">{data.name}</h1>
 
       <ul className="flex flex-col gap-1 text-sm text-gray-500 font-medium">
         <li>{`Tournaments: ${data.tournamentAmount}`}</li>
