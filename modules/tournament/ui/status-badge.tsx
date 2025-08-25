@@ -9,6 +9,14 @@ interface IProps {
 export const StatusBadge = (props: IProps) => {
   const { status } = props;
 
+  const formatStatusLabel = (status: TournamentStatus) => {
+    if (status.includes("-")) {
+      return status.split("-").map(capitalize).join(" ");
+    }
+
+    return capitalize(status);
+  };
+
   const getVariant = () => {
     switch (status) {
       case "finished":
@@ -20,5 +28,5 @@ export const StatusBadge = (props: IProps) => {
     }
   };
 
-  return <Badge variant={getVariant()}>{capitalize(status)}</Badge>;
+  return <Badge variant={getVariant()}>{formatStatusLabel(status)}</Badge>;
 };
