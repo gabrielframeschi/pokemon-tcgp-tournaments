@@ -12,7 +12,7 @@ import { IRanking } from "@/modules/tournament/types";
 import { sortRanking } from "@/modules/tournament/utils/ranking";
 import rankingRawData from "@/temp/ranking.json";
 
-const Ranking = () => {
+export const Ranking = () => {
   const data: IRanking = structuredClone(rankingRawData);
   const ranking = sortRanking(data.players);
 
@@ -42,5 +42,3 @@ const Ranking = () => {
     </Table>
   );
 };
-
-export default Ranking;

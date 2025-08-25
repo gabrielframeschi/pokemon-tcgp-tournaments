@@ -1,10 +1,21 @@
 import { Card } from "@/components/custom-card";
-import Ranking from "@/modules/tournament/ui/ranking";
+import { ITournament } from "@/modules/tournament/types";
+import { Ranking, TournamentHeader } from "@/modules/tournament/ui";
+import tournamentsRawData from "@/temp/tournaments.json";
 
 export default function Home() {
+  const data: ITournament[] = structuredClone(tournamentsRawData);
+  const tournament = data[0];
+
   return (
-    <Card>
-      <Ranking />
-    </Card>
+    <div className="flex flex-col gap-6">
+      <Card>
+        <TournamentHeader data={tournament} />
+      </Card>
+
+      <Card>
+        <Ranking />
+      </Card>
+    </div>
   );
 }
